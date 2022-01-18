@@ -1,0 +1,23 @@
+{
+  "name": "fundall",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ocrv/vue-tailwind-pagination": "^0.0.4",
+    "jw-vue-pagination": "^1.0.3",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.14",
+    "vite": "^2.7.2"
+  }
+}
