@@ -1,5 +1,5 @@
 <template>
-  <div class="py-6 px-20 flex items-center justify-between">
+  <div class="py-6 px-12 xl:px-20 flex items-center justify-between">
     <div>
       <router-link to="/">
         <img src="../assets/Fundall-MintGreen-Lockup.png" alt="" />
