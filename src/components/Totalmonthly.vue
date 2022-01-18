@@ -15,7 +15,7 @@
               class="flex items-center justify-between border-b pb-3 space-x-36 my-4"
             >
               <td class="flex items-center space-x-5">
-                <p class="w-4 h-4 rounded-full bg-green-300"></p>
+                <p class="w-4 h-4 rounded-full bg-green-400"></p>
                 <p>{{ items.date }}</p>
               </td>
               <td class="text-green-300">₦{{ items.expenses }}</td>

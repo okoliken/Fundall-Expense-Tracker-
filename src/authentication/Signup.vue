@@ -104,7 +104,7 @@
           <button
             :disabled="creatingAccount === true"
             type="submit"
-            class="text-center flex items-center justify-center w-full mt-2 py-3 shadow-md sign-up font-bold text-md cursor-not-allowed"
+            class="text-center flex items-center justify-center w-full py-3 shadow-md sign-up font-bold text-md cursor-not-allowed"
           >
             <img
               src="../assets/1497.gif"
