@@ -11,7 +11,7 @@ export default {
     <main class="flex items-center justify-center">
       <div>
         <div class="flex items-center justify-center mb-20">
-          <img src="../assets/Group 8.png" alt="" class="h-56" />
+          <img src="../assets/Group8.png" alt="" class="h-56" />
         </div>
         <div class="text-center">
           <h1 class="font-bold text-3xl my-3">Fundall Expense Tracker</h1>

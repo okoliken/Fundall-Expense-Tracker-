@@ -10,7 +10,7 @@
   <main class="container mx-auto flex flex-col xl:flex-row xl:justify-between">
     <div class="transform xl:translate-x-32 translate-y-12 mb-20 xl:mb-0">
       <div class="flex items-center justify-center">
-        <img src="../assets/Group 8.png" alt="" class="h-52" />
+        <img src="../assets/Group8.png" alt="" class="h-52" />
       </div>
       <div class="my-14 text-center xl:text-justify">
         <h1 class="text-4xl font-extrabold mb-8 green">
