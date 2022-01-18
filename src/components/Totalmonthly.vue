@@ -29,6 +29,8 @@
 </template>
 
 <script>
+const listelement = document.getElementById("list");
+const pagination_element = document.getElementById("pagination");
 export default {
   name: "Totalmonthly",
   props: {
@@ -37,10 +39,22 @@ export default {
   data() {
     return {
       doesUserHaveExpenses: true,
+      currentPage: 1,
+      rows: 5,
     };
   },
   components: {},
-  methods: {},
+  methods: {
+    // displayList(items, wrapper, rowsPerPage, page) {
+    //   wrapper.innerHtml = ""
+    //   page--;
+    //   let loop_start = rowsPerPage * page
+    //   let paginatedItems = items.slice(loop_start,  rowsPerPage + page)
+    // },
+  },
+  mounted() {
+    // this.displayList()
+  },
 };
 </script>
 

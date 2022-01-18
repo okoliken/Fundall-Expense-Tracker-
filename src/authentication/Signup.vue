@@ -13,14 +13,14 @@
         <img src="../assets/Group8.png" alt="" class="h-52" />
       </div>
       <div class="my-14 text-center xl:text-justify">
-        <h1 class="text-4xl font-extrabold mb-8 green">
+        <h1 class="text-4xl font-bold mb-8 green">
           Welcome!
           <span class="text-black"
             >Let's get <br />
             to know you.</span
           >
         </h1>
-        <p class="font-bold text-md">
+        <p class="font-medium text-md">
           You first step toward a better financial <br />
           lifestyle starts here.
         </p>
@@ -63,7 +63,7 @@
             />
           </div>
         </div>
-        <div class="flex flex-col mb-5">
+        <div class="flex flex-col mb-7">
           <label for="" class="text-sm">Email Address</label>
           <input
             v-model="userDetails.email"
@@ -75,7 +75,7 @@
             class="border p-2 focus:border-green-300 outline-none"
           />
         </div>
-        <div class="flex flex-col mb-5">
+        <div class="flex flex-col mb-7">
           <label for="" class="text-sm">Password</label>
           <input
             v-model="userDetails.password"
@@ -104,7 +104,7 @@
           <button
             :disabled="creatingAccount === true"
             type="submit"
-            class="text-center flex items-center justify-center w-full py-3 shadow-md sign-up font-bold text-md cursor-not-allowed"
+            class="text-center flex items-center justify-center w-full mt-2 py-3 shadow-md sign-up font-bold text-md cursor-not-allowed"
           >
             <img
               src="../assets/1497.gif"
@@ -121,7 +121,7 @@
           class="text-center w-full py-3 shadow-md sign-up font-bold text-md cursor-pointer"
         />
 
-        <p class="text-sm text-center my-3">
+        <p class="text-sm text-center mt-7">
           Already have an account?
           <router-link :to="{ name: 'Login' }" class="green"
             >Login here</router-link

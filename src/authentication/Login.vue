@@ -8,13 +8,13 @@
   </div>
 
   <main class="container mx-auto flex flex-col xl:flex-row xl:justify-between">
-    <div class="transform xl:translate-x-52 translate-y-12 mb-20 xl:md-0">
+    <div class="transform xl:translate-x-36 translate-y-12 mb-20 xl:md-0">
       <div class="flex items-center justify-center">
         <img src="../assets/Group1.png" class="h-52" />
       </div>
-      <div class="my-14 text-center xl:text-justify">
-        <h1 class="text-4xl font-extrabold mb-2 green">Welcome! Back</h1>
-        <p class="font-extrabold text-4xl">We miss You</p>
+      <div class="my-10 text-center xl:text-justify">
+        <h1 class="text-4xl font-bold mb-2 green">Welcome! Back</h1>
+        <p class="font-bold text-4xl">We missed You</p>
       </div>
     </div>
 
@@ -31,11 +31,11 @@
       </transition>
       <form
         @submit.prevent="createUserAccount(userDetails)"
-        class="bg-white w-full shadow-md p-12 form"
+        class="bg-white w-full shadow-md p-16 form"
       >
         <div class="w-full mb-6">
-          <h1 class="font-semibold text-3xl mb-2">Holla</h1>
-          <p class="font-semibold text-md">Sign in to vibe</p>
+          <h1 class="font-medium text-3xl mb-2">Holla</h1>
+          <p class="font-medium text-md text-gray-600">Sign in to vibe !</p>
         </div>
         <div class="flex flex-col mb-6">
           <label for="" class="text-sm l1">Email or Username</label>
@@ -80,7 +80,7 @@
           class="text-center w-full py-3 shadow-md sign-up font-bold text-md cursor-pointer"
         />
 
-        <p class="text-sm text-center mt-3 mb-3">
+        <p class="text-sm text-center mt-5 mb-3">
           Don't have an account?
           <router-link :to="{ name: 'Signup' }" class="green"
             >Register here</router-link
