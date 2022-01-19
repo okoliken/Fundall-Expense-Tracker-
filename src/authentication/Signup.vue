@@ -30,6 +30,11 @@
     <div
       class="p-3 h-auto flex items-center flex-col rounded-md justify-center transform -translate-y-14 xl:-translate-x-36"
     >
+      <transition name="fade" mode="in-out">
+        <p class="bg-red-400 text-white p-2 mb-2 rounded-lg" v-if="signinError">
+          {{ signinError.message }}
+        </p>
+      </transition>
       <form
         @submit.prevent="createUserAccount(userDetails)"
         class="bg-white w-full shadow-md p-12"
@@ -152,6 +157,7 @@ export default {
         password_confirmation: "",
       },
       creatingAccount: false,
+      signinError: "",
     };
   },
   methods: {
@@ -170,10 +176,14 @@ export default {
           }
         );
         const response = await request.json();
+        console.log(response);
+        this.signinError = response.error;
+        setTimeout(() => {
+          this.signinError = response.false;
+        }, 2000);
         this.creatingAccount = false;
 
-        this.$router.push("/authentication/Login");
-        console.log(response);
+        this.$router.push({ name: "Signup" });
       } catch (error) {
         console.log(error);
         this.creatingAccount = false;
@@ -190,6 +200,16 @@ export default {
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
 .green {
   color: #4ce895;
 }

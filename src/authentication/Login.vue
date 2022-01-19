@@ -24,13 +24,13 @@
       <transition name="fade" mode="out-in">
         <p
           class="bg-red-400 text-white p-2 mb-2 rounded-lg"
-          v-if="userData.error"
+          v-if="loginerror.error"
         >
-          {{ userData.error.message }}
+          {{ loginerror.error.message }}
         </p>
       </transition>
       <form
-        @submit.prevent="createUserAccount(userDetails)"
+        @submit.prevent="loginUser(userDetails)"
         class="bg-white w-full shadow-md p-16 form"
       >
         <div class="w-full mb-6">
@@ -112,7 +112,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["createUserAccount"]),
+    ...mapActions(["loginUser"]),
     changelabelcolor(e) {
       e.target.previousElementSibling.classList.add("text-green-300");
     },
@@ -120,7 +120,7 @@ export default {
       e.target.previousElementSibling.classList.remove("text-green-300");
     },
   },
-  computed: mapState(["logining", "userData"]),
+  computed: mapState(["logining", "loginerror"]),
 };
 </script>
 

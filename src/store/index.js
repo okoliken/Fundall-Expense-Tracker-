@@ -5,16 +5,19 @@ export default createStore({
   state: {
     logining: false,
     userData: [],
+    loginerror: [],
   },
   getters: {
     returnUserData: (state) => state.userData,
+    loginerror: (state) => state.loginerror,
   },
   mutations: {
     mutateLoading: (state, payload) => (state.logining = payload),
     mutateUserData: (state, payload) => (state.userData = payload),
+    mutateloginerror: (state, payload) => (state.loginerror = payload),
   },
   actions: {
-    async createUserAccount({ commit }, userinput) {
+    async loginUser({ commit }, userinput) {
       try {
         commit("mutateLoading", true);
         const request = await fetch(
@@ -29,6 +32,8 @@ export default createStore({
           }
         );
         const response = await request.json();
+
+        commit("mutateloginerror", response);
 
         sessionStorage.setItem("token", response.success.user.access_token);
         commit("mutateLoading", false);
