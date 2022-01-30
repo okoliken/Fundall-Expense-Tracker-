@@ -1,11 +1,5 @@
 <template>
-  <div class="py-6 px-12 md:px-20 flex items-center justify-between">
-    <div>
-      <router-link to="/">
-        <img src="../assets/Fundall-MintGreen-Lockup.png" alt="" />
-      </router-link>
-    </div>
-  </div>
+  <LogoVue />
 
   <main class="container mx-auto flex flex-col xl:flex-row xl:justify-between">
     <div class="transform xl:translate-x-36 translate-y-12 mb-20 xl:md-0">
@@ -21,6 +15,7 @@
     <div
       class="p-3 h-auto w-full xl:w-2/5 flex items-center flex-col rounded-md justify-center transform -translate-y-14 xl:-translate-x-36"
     >
+      <!-- Show ERROR IF LOGIN CREDENTIALS ARE FALSE -->
       <transition name="fade" mode="out-in">
         <p
           class="bg-red-400 text-white p-2 mb-2 rounded-lg"
@@ -29,6 +24,7 @@
           {{ loginerror.error.message }}
         </p>
       </transition>
+
       <form
         @submit.prevent="loginUser(userDetails)"
         class="bg-white w-full shadow-md p-16 form"
@@ -61,7 +57,7 @@
             class="border p-2 focus:border-green-300 outline-none"
           />
         </div>
-
+        <!-- RENDER LOADING BTN WHEN LOGING IN -->
         <div v-if="logining === true" class="relative">
           <button
             :disabled="logining === true"
@@ -72,7 +68,7 @@
             <img src="../assets/1497.gif" alt="not found" class="w-5" />
           </button>
         </div>
-
+        <!-- END -->
         <input
           v-else
           type="submit"
@@ -101,6 +97,7 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
+import LogoVue from "../components/Logo.vue";
 export default {
   name: "Login",
   data() {
@@ -121,6 +118,7 @@ export default {
     },
   },
   computed: mapState(["logining", "loginerror"]),
+  components: { LogoVue },
 };
 </script>
 

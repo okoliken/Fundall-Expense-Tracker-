@@ -47,6 +47,7 @@ export default createStore({
     },
     getUserProfile: async ({ commit }) => {
       const token = sessionStorage.getItem("token");
+      commit("mutateLoading", true);
       const req = await fetch(
         "https://campaign.fundall.io/api/v1/base/profile",
         {
@@ -60,6 +61,7 @@ export default createStore({
       );
       const data = await req.json();
       commit("mutateUserData", data);
+      commit("mutateLoading", false);
       console.log(data);
     },
   },

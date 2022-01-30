@@ -7,7 +7,9 @@
     </div>
   </div>
 
+  <SkeletonVue v-if="logining === true" />
   <main
+    v-else
     class="container mx-auto flex flex-col-reverse xl:flex-row my-16 xl:my-0 justify-between"
   >
     <div>
@@ -167,10 +169,14 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import { mapGetters, mapActions, mapState } from "vuex";
 import Totalmonthly from "../components/Totalmonthly.vue";
+import SkeletonVue from "../components/Skeleton.vue";
 export default {
-  computed: mapGetters(["returnUserData"]),
+  computed: {
+    ...mapGetters(["returnUserData"]),
+    ...mapState(["logining"]),
+  },
   data() {
     return {
       amountone: "",
@@ -184,7 +190,7 @@ export default {
       excceded: false,
     };
   },
-  components: { Totalmonthly },
+  components: { Totalmonthly, SkeletonVue },
   methods: {
     addUserExpense() {
       const budget = { date: this.dateTarget, expenses: this.actualExpenses };

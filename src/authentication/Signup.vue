@@ -1,12 +1,5 @@
 <template>
-  <div class="py-6 px-12 md:px-20 flex items-center justify-between">
-    <div>
-      <router-link to="/">
-        <img src="../assets/Fundall-MintGreen-Lockup.png" alt="" />
-      </router-link>
-    </div>
-  </div>
-
+  <LogoVue />
   <main class="container mx-auto flex flex-col xl:flex-row xl:justify-between">
     <div class="transform xl:translate-x-32 translate-y-12 mb-20 xl:mb-0">
       <div class="flex items-center justify-center">
@@ -145,6 +138,7 @@
 </template>
 
 <script>
+import LogoVue from "../components/Logo.vue";
 export default {
   name: "Signup",
   data() {
@@ -196,6 +190,7 @@ export default {
       e.target.previousElementSibling.classList.remove("text-green-300");
     },
   },
+  components: { LogoVue },
 };
 </script>
 
