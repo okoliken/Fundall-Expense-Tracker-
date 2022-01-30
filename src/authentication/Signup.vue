@@ -177,7 +177,7 @@ export default {
         }, 2000);
         this.creatingAccount = false;
 
-        this.$router.push({ name: "Signup" });
+        this.$router.push({ name: "Login" });
       } catch (error) {
         console.log(error);
         this.creatingAccount = false;
